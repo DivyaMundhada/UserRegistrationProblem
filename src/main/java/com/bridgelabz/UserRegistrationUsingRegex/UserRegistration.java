@@ -19,12 +19,20 @@ public class UserRegistration {
 		System.out.println(lastName.matches(("^[A-Z]{1}[a-z]{2,}$")));
 	}
 
+	// Checking Email Address Using Regex
+	public void emailAddress() {
+		System.out.println("Enter your Email Address: ");
+		String emailAddress = scan.next();
+		System.out.println(emailAddress.matches("[A-Za-z0-9.+_%-]+@[A-Za-z0-9.-]+.[a-zA-Z]{2,4}"));
+	}
+
 	public static void main(String[] args) {
 		// Welcome Message
 		System.out.println("Welcome to User Registration Program.");
 		UserRegistration object = new UserRegistration();
 		object.firstName();
 		object.lastName();
+		object.emailAddress();
 
 	}
 
