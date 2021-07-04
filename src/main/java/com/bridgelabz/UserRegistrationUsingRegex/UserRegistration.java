@@ -26,6 +26,13 @@ public class UserRegistration {
 		System.out.println(emailAddress.matches("[A-Za-z0-9.+_%-]+@[A-Za-z0-9.-]+.[a-zA-Z]{2,4}"));
 	}
 
+	// Checking Mobile Number Using Regex
+	public void mobileNumber() {
+		System.out.println("Enter your Mobile Number: ");
+		String mobileNumber = scan.next();
+		System.out.println(mobileNumber.matches("^[0-9]{2}[-][0-9]{10}"));
+	}
+
 	public static void main(String[] args) {
 		// Welcome Message
 		System.out.println("Welcome to User Registration Program.");
@@ -33,6 +40,7 @@ public class UserRegistration {
 		object.firstName();
 		object.lastName();
 		object.emailAddress();
+		object.mobileNumber();
 
 	}
 
