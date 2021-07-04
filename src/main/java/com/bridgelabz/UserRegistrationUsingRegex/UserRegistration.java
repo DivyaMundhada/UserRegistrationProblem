@@ -33,6 +33,13 @@ public class UserRegistration {
 		System.out.println(mobileNumber.matches("^[0-9]{2}[-][0-9]{10}"));
 	}
 
+	// Checking Password with Rule 1 - Minimum * Characters
+	public void passWord() {
+		System.out.println("Enter your password: ");
+		String passWord = scan.next();
+		System.out.println(passWord.matches("^[a-zA-Z0-9@!&$%#-_*+]{8,}"));
+	}
+
 	public static void main(String[] args) {
 		// Welcome Message
 		System.out.println("Welcome to User Registration Program.");
@@ -41,6 +48,7 @@ public class UserRegistration {
 		object.lastName();
 		object.emailAddress();
 		object.mobileNumber();
+		object.passWord();
 
 	}
 
