@@ -6,7 +6,7 @@ public class UserRegistration {
 	Scanner scan = new Scanner(System.in);
 
 	// Checking First Name Using Regex
-	
+
 	public void firstName() {
 		System.out.println("Enter First Name: ");
 		String firstName = scan.next();
@@ -41,7 +41,8 @@ public class UserRegistration {
 	public void passWord() {
 		System.out.println("Enter your password: ");
 		String passWord = scan.next();
-		System.out.println(passWord.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"));
+		System.out.println(passWord.matches(
+				"(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=^[^!@#$%^&*]*[!@#$%^&*][^!@#$%^&*]*$)[a-zA-Z0-9!@#$%^&*]{8,}"));
 	}
 
 	public static void main(String[] args) {
